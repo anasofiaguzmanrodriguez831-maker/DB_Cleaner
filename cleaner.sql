@@ -1119,7 +1119,6 @@ WHERE fecha_pago BETWEEN '2008-01-01' AND '2008-12-31';
 SHOW TABLES;
 
 DESCRIBE pedido;
-
 SELECT codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega
 FROM pedido
 WHERE fecha_entrega > fecha_esperada
