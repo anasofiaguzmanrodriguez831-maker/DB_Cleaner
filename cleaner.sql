@@ -1120,14 +1120,11 @@ SHOW TABLES;
 
 DESCRIBE pedido;
 
-SELECT * FROM pedido;
-
-SELECT codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega
-FROM pedido;
-
 SELECT codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega
 FROM pedido
-WHERE fecha_entrega > fecha_esperada;
+WHERE fecha_entrega > fecha_esperada
+   OR fecha_entrega IS NULL;
+
 
 /* RETO I  Genera un listado con el código de pedido, código de cliente, fecha esperada y fecha de entrega de los pedidos cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.
 Utilizando la función ADDDATE de MySQL.
