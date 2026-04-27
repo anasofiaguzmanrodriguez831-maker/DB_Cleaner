@@ -1149,7 +1149,9 @@ WHERE fecha_entrega <= ADDDATE(fecha_esperada, INTERVAL -2 DAY);
 /*RESPUESTA (DATEDIFF)*/
 SELECT codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega
 FROM pedido
-WHERE DATEDIFF(fecha_esperada, fecha_entrega) >= 2;
+WHERE DATEDIFF(fecha_entrega, fecha_esperada) >= 2; 
+
+SELECT 
 
 /*RETO J. Genera un listado de todos los pedidos que fueron rechazados en 2009.*/
 
